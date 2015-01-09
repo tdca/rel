@@ -9,7 +9,6 @@ requires:
 import requests
 import StringIO
 import marshal
-from datetime import date
 from lxml.html import etree
 
 '''
@@ -66,5 +65,5 @@ if __name__ == '__main__':
         for z in waiting.copy():
             print z
             apply(plrel, z)
-    with open('REL-%s.dat'%(date.today().strftime("%b-%d-%Y")), "wb") as f:
+    with open('rel.dat', "wb") as f:
         marshal.dump(rel, f)
